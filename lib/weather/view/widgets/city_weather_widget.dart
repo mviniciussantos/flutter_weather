@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app_challenge/models/weather_response.dart';
+import 'package:open_weather_api/open_weather_api.dart';
 
 class CityWeatherWidget extends StatelessWidget {
   final WeatherResponse weatherResponse;
@@ -13,12 +13,12 @@ class CityWeatherWidget extends StatelessWidget {
         Text(
           weatherResponse.name ?? '',
           style: const TextStyle(
-              fontSize: 50, color: Colors.white, fontWeight: FontWeight.bold),
+              fontSize: 50, color: Colors.black, fontWeight: FontWeight.bold),
         ),
         Text('${weatherResponse.main.temp.toInt()} °C ',
             style: const TextStyle(
                 fontSize: 24,
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.bold)),
         const SizedBox(height: 6),
         Row(
@@ -33,7 +33,7 @@ class CityWeatherWidget extends StatelessWidget {
               '${weatherResponse.weather[0].main} - ${weatherResponse.weather[0].description}',
               style: const TextStyle(
                 fontSize: 16,
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             )
@@ -44,9 +44,9 @@ class CityWeatherWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text('Max: ${weatherResponse.main.tempMax.toInt()} °C',
-                style: const TextStyle(fontSize: 18, color: Colors.white)),
+                style: const TextStyle(fontSize: 18, color: Colors.black)),
             Text('Min: ${weatherResponse.main.tempMin.toInt()} °C',
-                style: const TextStyle(fontSize: 18, color: Colors.white)),
+                style: const TextStyle(fontSize: 18, color: Colors.black)),
           ],
         ),
       ],

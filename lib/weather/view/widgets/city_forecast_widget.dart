@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app_challenge/models/forecast.dart';
+import 'package:open_weather_api/open_weather_api.dart';
 
 class CityForecastWidget extends StatelessWidget {
   final List<Forecast> forecasts;
@@ -12,7 +12,7 @@ class CityForecastWidget extends StatelessWidget {
       padding: const EdgeInsets.all(6.0),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white24,
+          // color: Colors.black,
           borderRadius: BorderRadius.circular(16),
         ),
         child: ListView.builder(
@@ -29,7 +29,7 @@ class CityForecastWidget extends StatelessWidget {
                   child: Text(item.date,
                       style: const TextStyle(
                         fontSize: 16,
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                       )),
                 ),
@@ -46,7 +46,7 @@ class CityForecastWidget extends StatelessWidget {
                       item.weather,
                       style: const TextStyle(
                         fontSize: 12,
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     )
@@ -59,13 +59,13 @@ class CityForecastWidget extends StatelessWidget {
                       Text(
                         'Min: ${item.tempMin} °C',
                         style:
-                            const TextStyle(fontSize: 16, color: Colors.white),
+                            const TextStyle(fontSize: 16, color: Colors.black),
                       ),
                       const SizedBox(width: 8),
                       Text(
                         'Max: ${item.tempMax} °C',
                         style:
-                            const TextStyle(fontSize: 16, color: Colors.white),
+                            const TextStyle(fontSize: 16, color: Colors.black),
                       ),
                     ],
                   ),
