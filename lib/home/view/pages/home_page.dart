@@ -12,18 +12,21 @@ class HomePage extends StatelessWidget {
         title: const Text('Concert List'),
       ),
       body: const SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              flex: 1,
-              child: SearchWidget(),
-            ),
-            Divider(),
-            Expanded(
-              flex: 1,
-              child: CityListWidget(),
-            )
-          ],
+        child: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 1,
+                child: SearchWidget(),
+              ),
+              Divider(),
+              Expanded(
+                flex: 1,
+                child: CityListWidget(),
+              )
+            ],
+          ),
         ),
       ),
     );
